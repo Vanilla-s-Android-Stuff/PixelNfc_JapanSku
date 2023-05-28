@@ -40,4 +40,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // https://medium.com/@meetvora1994/develop-your-first-xposed-module-386c7b0335a2
+    // provided 'de.robv.android.xposed:api:82'
+    // provided 'de.robv.android.xposed:api:82:sources'
+
+    compileOnly 'de.robv.android.xposed:api:82'
+    compileOnly 'de.robv.android.xposed:api:82:sources'
 }
