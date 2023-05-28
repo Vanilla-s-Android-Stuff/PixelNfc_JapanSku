@@ -10,7 +10,8 @@ class MyModule : IXposedHookLoadPackage {
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
         XposedBridge.log("Loaded app: " + lpparam.packageName)
 
-        XposedHelpers.findAndHookMethod("com.google.android.pixelnfc.provider",
+        XposedHelpers.findAndHookMethod(
+            "com.google.android.pixelnfc.provider.DeviceInfoContentProvider",
             lpparam.classLoader, "isDeviceJapanSku", String::class.java,
 
             object : XC_MethodHook() {
